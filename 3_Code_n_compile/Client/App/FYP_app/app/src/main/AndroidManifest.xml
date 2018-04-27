@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fyp_app">
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <permission
+        android:name="com.fyp_app.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.fyp_app.permission.C2D_MESSAGE" />
+
+    <!--<service android:name=".MyFirebaseInstanceIDService">-->
+        <!--<intent-filter>-->
+            <!--<action android:name="com.google.firebase.INSTANCE_ID_EVENT" />-->
+        <!--</intent-filter>-->
+    <!--</service>-->
+    <!--<service android:name=".MyFirebaseMessagingService">-->
+        <!--<intent-filter>-->
+            <!--<action android:name="com.google.firebase.MESSAGING_EVENT" />-->
+        <!--</intent-filter>-->
+    <!--</service>-->
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.example.gcm" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".PaymentByFaceTransferPageActivity">
+            <intent-filter>
+                <action android:name="com.fyp_app_TARGET_NOTIFICATION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".HomePageActivity" />
+        <activity android:name=".PaymentPageActivity" />
+        <activity android:name=".GatherQRCodeDisplayActivity" />
+        <activity android:name=".RegisterPageActivity" />
+        <activity android:name=".PaymentByScanActivity" />
+        <activity android:name=".PaymentByAccountActivity" />
+        <activity android:name=".PaymentByMyQRCodeActivity" />
+        <activity android:name=".PaymentByMyQRCodeDisplayActivity" />
+        <activity android:name=".GatheringPageActivity" />
+        <activity android:name=".GatherByScanActivity" />
+        <activity android:name=".GatherByFaceActivity" >
+        <!--<activity android:name=".PaymentByFaceTransferPageActivity">-->
+
+        </activity>
+    </application>
+
+</manifest>

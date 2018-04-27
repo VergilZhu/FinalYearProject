@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Free Yeah Payment</string>
+    <string name="Login_Username">Username</string>
+    <string name="Login_Password">Password</string>
+    <string name="Login_Button">Login</string>
+    <string name="Register_TextView">No Account? Register Here!</string>
+    <string name="Server_IP">192.168.137.1</string>
+    <string name="Server_Port">8000</string>
+    <string name="title_activity_pay_qrcode_display">PayQRCodeDisplay</string>
+    <string name="title_activity_pay_qrcode">PayQRCodeActivity</string>
+</resources>
